@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://bhadadeaditya1310:aditya1310@cluster0.a7opswp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const MONGODB_URI = process.env.MONGODB_URI 
 
 mongoose.connect(MONGODB_URI)
   .then(() => {
