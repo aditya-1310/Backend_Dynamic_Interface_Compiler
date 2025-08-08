@@ -6,7 +6,6 @@ const router = express.Router()
 router.get('/schemas', async (req, res) => {
   try {
     const schemas = await UISchema.find()
-      .select('_id name description createdAt updatedAt')
       .sort({ createdAt: -1 })
       .limit(50) // Limit to prevent large responses
 
